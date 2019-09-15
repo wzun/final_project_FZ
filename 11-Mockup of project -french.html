@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        .text-justified {
+            text-align: justify;
+        }
+        .text-green {
+            color: rgb(0, 152, 179);
+        }
+        .glyphicon-large {
+            font-size: 50px;
+        }
+        .bcolor-grey {
+            background-color: #EEEEEE;
+        }
+        .margin-enabled {
+            margin: 50px 0 50px 0;
+        }
+        .padding-enabled {
+            padding: 20px 3%; 
+        }
+        .navbar-second {
+            margin-bottom: 0;
+            border-radius: 0;
+            border: 0;
+            background-color: rgb(0, 173, 179);
+        }
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            border: 0;
+            background-color: rgb(115, 124, 117);
+        }
+        .navbar li a, .navbar .navbar-brand {
+            color: white !important;
+            font-size: 20px;
+            padding-top: 25px;
+        }
+        .nav-fr{
+            color:white;
+            float:right;
+            padding-right:25px; 
+        }
+        .nav-fr li,.nav-fr a{
+            display: inline;
+            list-style: none;
+            text-decoration: none;
+        }
+        .logo{
+            float:left;
+        }
+        .title{
+            float:right;
+            margin-left: 10px;
+        }
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: rgb(0, 173, 179) ;
+            font-size: 30px;
+        }
+        .hr{
+			color:rgb(45, 34, 139);
+			margin:0;
+			padding:1px;
+		}
+        .jumbotron {
+            color:rgb(16, 28, 196);
+            background-image: url('./imgs/image-01.jpg');
+            margin-top: 180px;
+            margin-bottom: 0;
+        }
+        .services{
+            color:black;
+        }
+        .carousel {
+            margin: 0;
+        }
+        footer{
+            margin-top: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .col-sm-7{
+            float:right;
+            padding: 0;
+        }
+        .call td:hover{
+	    		background-color: #6d8ab7;
+				color: white;
+	    	}
+            .cal td:hover{
+				background-color: #6d8ab7;
+				color: white;			
+            }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#indexNavbar" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="logo">
+            <a href="#"><img class="img-logo" src="./imgs/CEMTL-logo.png" width="150" height="70" alt='This is an CEMTL-logo'/></a>
+            </div>
+            <div class="title">
+            <a class="navbar-brand" href="Foo"><big><em>Construction Engineering Material Testing Laboratory</em></big></a>           
+            </div>
+        </div>
+    </div>
+    <hr class="hr">
+    <div class="navbar-second">
+        <div class="collapse navbar-collapse" id="indexNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="https://www.google.ca">Accueil</a></li>
+                <li><a href="">Prestations de service</a></li>
+                <li><a href="">Contactez nous</a></li>
+                <li><a href="">À propos de nous</a></li>
+                <li><a href="">Projets</a></li>                
+            </ul>
+            <ul class="nav-fr">
+                <li><a href="11-Mockup of project-english.html"><h5>English</h5></a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="" data-toggle="modal" data-target="#signUpModal"><span class="glyphicon glyphicon-user"></span> S'inscrire</a></li>
+                <li><a href="" data-toggle="modal" data-target="#signInModal"><span class="glyphicon glyphicon-log-in"></span> Connexion (clients)</a></li>
+                <li><a href="" data-toggle="modal" data-target="#signInModal"><span class="glyphicon glyphicon-log-in"></span> Connexion (Employés)</a></li>                
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron text-center">
+    <div class="container">
+        <h2>Demander des services maintenant!</h2>
+        <p>Choisissez notre service ci-dessous:</p>
+        <p><a class="services" href="http://ccmet.ca/services/materials-engineering/">Ingénieurie des matériaux</a></p>
+        <p><a class="services" href="http://ccmet.ca/services/environmental-engineering/">Génie de l'environnement</a></p>
+        <p><a class="services" href="http://ccmet.ca/services/geotechnical-engineering/">Ingénierie géotechnique</a></p>
+        <p><a class="services" href="http://ccmet.ca/services/specialty-services/">Services spécialisés</a></p>
+
+        <form class="form-inline">
+            <input class="form-control" type="email" size="50" placeholder="" required="required"/>
+            <button class="btn btn-success" type="submit">Demander un service!</button>
+        </form>
+    </div>
+</div>
+
+<div class="carousel slide" id="indexCarousel" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#indexCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#indexCarousel" data-slide-to="1"></li>
+        <li data-target="#indexCarousel" data-slide-to="2"></li>
+        <li data-target="#indexCarousel" data-slide-to="3"></li>
+        <li data-target="#indexCarousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="./imgs/image-02.jpg"/>
+            <div class="carousel-caption">
+                <span class="carousel-caption-inner">
+                </span>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./imgs/image-03.jpg"/>
+            <div class="carousel-caption">
+                <span class="carousel-caption-inner">
+                </span>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./imgs/image-04.jpg"/>
+            <div class="carousel-caption">
+                <span class="carousel-caption-inner">
+                </span>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./imgs/image-05.jpg"/>
+            <div class="carousel-caption">
+                <span class="carousel-caption-inner">
+                </span>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./imgs/image-06.jpg"/>
+            <div class="carousel-caption">
+                <span class="carousel-caption-inner">
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid margin-enabled text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <span class="glyphicon glyphicon-search glyphicon-large text-green"></span>
+            <h4>Rechercher <span class="text-green">Prestations de service</span> basé sur <span class="text-green">mots clés</span></h4>
+            <p>Notre service fournit un moteur de recherche puissant qui trie les nouveaux diplômés en fonction.</p>
+        </div>
+        
+        <div class="col-sm-6">
+            <span class="glyphicon glyphicon-envelope glyphicon-large text-green"></span>
+            <h4>Envoyer des messages directs à notre société</h4>
+            <p>Toutes les constructions utilisant ces matériaux doivent réaliser des analyses qualitatives
+                                 essais conformément aux normes internationales établies</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid padding-enabled bcolor-grey">
+    <h2 class="text-green text-center">Prendre un rendez-vous:</h2>
+    <br/><br/>
+    <div class="row">
+        <div class="col-sm-2">
+            <p>Nos coordonnées</p>
+            <p><span class="glyphicon glyphicon-map-marker text-green"></span> Montreal, Canada</p>
+            <p><span class="glyphicon glyphicon-phone text-green"></span> 1-(888)888-8888</p>
+            <p><span class="glyphicon glyphicon-envelope text-green"></span> CEMTL@gmail.com</p>
+        </div>
+
+        <div class="col-sm-4">
+            <table class="call" border="0" width="300" height="60" cellpadding="0" cellspacing="0"
+			style="background-color:lightgray;">
+			<tr>
+					<td class="callleft" align="center" ><strong><</strong></td>
+					<td colspan="5" align="center" style="background-color: lightgray; color: black;"><strong>April 2019</strong></td>
+					<td align="center"><b>></b></td>
+			</tr>
+			<tr>
+					<td align="center" width="100" style="background-color: lightgray; color: black;"><b>Sun</td>
+					<td align="center" width="100" style="background-color: lightgray; color: black;"><b>Mon</b></td>
+					<td align="center" width="100" style="background-color: lightgray; color: black;"><b>Tue</b></td>
+					<td align="center" width="100" style="background-color: lightgray; color: black;"><b>Wed</b></td>
+					<td align="center" width="100" style="background-color: lightgray; color: black;"><b>Thu</b></td>
+					<td align="center" width="100" style="background-color: lightgray; color: black;"><b>Fri</b></td>
+					<td align="center" width="100" style="background-color: lightgray; color: black;"><b>Sat</b></td>
+			</tr>
+		</table>
+		<table  class="cal" border="1" width="300" height="150" cellpadding="0" cellspacing="0"
+			style="background-color: darkgray ; border-color: gainsboro">
+			<tr>
+				<td align="center" style="background-color: lightgray; color: black;" ><b>30</b></td>
+				<td align="center" style="background-color: lightgray; color: black;" ><b>31</b></td>
+				<td align="center"><b>1</b></td>
+				<td align="center"><b>2</b></td>
+				<td align="center"><b>3</b></td>
+				<td align="center"><b>4</b></td>
+				<td align="center"><b>5</b></td>
+			</tr>
+			<tr>
+				<td align="center"><b>6</b></td>
+				<td align="center"><b>7</b></td>
+				<td align="center" style="color: white; background-color: #6d8ab7;"><b>8</b></td>
+				<td align="center"><b>9</b></td>
+				<td align="center"><b>10</b></td>
+				<td align="center"><b>11</b></td>
+				<td align="center"><b>12</b></td>
+			</tr>
+			<tr>
+				<td align="center"><b>13</b></td>
+				<td align="center"><b>14</b></td>
+				<td align="center"><b>15</b></td>
+				<td align="center"><b>16</b></td>
+				<td align="center"><b>17</b></td>
+				<td align="center"><b>18</b></td>
+				<td align="center"><b>19</b></td>
+			</tr>
+			<tr>
+				<td align="center"><b>20</b></td>
+				<td align="center"><b>21</b></td>
+				<td align="center"><b>22</b></td>
+				<td align="center"><b>23</b></td>
+				<td align="center"><b>24</b></td>
+				<td align="center"><b>25</b></td>
+				<td align="center"><b>26</b></td>
+			</tr>
+			<tr>
+				<td align="center"><b>27</b></td>
+				<td align="center"><b>28</b></td>
+				<td align="center"><b>29</b></td>
+				<td align="center"><b>30</b></td>
+				<td align="center"><b>31</b></td>
+				<td align="center" style="background-color: lightgray; color: black;"><b>1</b></td>
+				<td align="center" style="background-color: lightgray; color: black;"><b>2</b></td>
+			</tr>
+		</table>
+        </div>
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" name="name" placeholder="Entrez votre nom:" type="text" required="required"/>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" name="email" placeholder="Entrer votre Email:" type="email" required="required"/>
+                </div>
+            </div>
+            <textarea class="col-sm-12 form-group" name="comment" placeholder="Entrez votre commentaire:" rows="6"></textarea>
+            <br/>
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <button class="btn btn-success" type="submit">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- signUpModal -->
+<div class="modal fade" id="signUpModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title text-green">Sign Up Form</h3>
+            </div>
+            <div class="modal-body">
+                <form class="form" name="signUpForm">
+                    <div class="form-group">
+                        <label for="signUpLastName">Enter your Last Name:</label>
+                        <input class="form-control" id="signUpLastName" name="Name" type="Name" required="required"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpFirstName">Enter your First Name:</label>
+                        <input class="form-control" id="signUpFirstName" name="Name" type="Name" required="required"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpCName">Enter your Company Name:</label>
+                        <input class="form-control" id="signUpCName" name="Name" type="Name" required="required"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpEmail">Enter your email:</label>
+                        <input class="form-control" id="signUpEmail" name="email" type="email" required="required"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpPass">Enter your password:</label>
+                        <input class="form-control" id="signUpPass" name="pass" type="password" required="required"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpPassRepeat">Repeat your password:</label>
+                        <input class="form-control" id="signUpPassRepeat" name="passRepeat" type="password" required="required"/>
+                    </div>
+                    <button class="btn btn-success" id="signUpSubmit" type="submit" disabled="">Submit</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-info" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- signInModal -->
+<div class="modal fade" id="signInModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title text-green">Sign In Form</h3>
+            </div>
+            
+            <div class="modal-body">
+                <form class="form" name="signInModal">
+                    <div class="form-group">
+                        <label for="signInName">Enter your SignIn name:</label>
+                        <input class="form-control" id="signInName" name="name" type="text" required="required"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="signInPass">Enter your SignIn password:</label>
+                        <input class="form-control" id="signInPass" name="pass" type="password" required="required"/>
+                    </div>                   
+                </form>
+            </div>
+            
+            <div class="modal-footer">
+                <button class="btn btn-success" id="signInSubmit" type="submit" disabled="">Submit</button>
+                <button class="btn btn-info" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Copyright &copy; 2019  Construction Engineering Material Testing Laboratory</p>
+</footer>
+
+</body>
+</html>
